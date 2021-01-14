@@ -9,10 +9,10 @@ import { LoginComponent } from "./login/login.component";
 import { ProductsComponent } from "./products/products.component";
 import { BuyersComponent } from "./buyers/buyers.component";
 import { SellersComponent } from "./sellers/sellers.component";
-import { ApproutingModule } from "./approuting.module";
+import { AppRouting } from "./app-routing";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ApproutingModule],
+  imports: [BrowserModule, FormsModule, AppRouting],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -22,6 +22,6 @@ import { ApproutingModule } from "./approuting.module";
     BuyersComponent,
     SellersComponent
   ],
-  bootstrap: [LoginComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router,ActivatedRoute } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -7,10 +7,10 @@ import { Router,ActivatedRoute } from "@angular/router";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private route: ActivatedRoute,private routes: Router) {}
+  constructor(private routes: Router) {
+    document.getElementById('login').style.display ="none";
+  }
 
   ngOnInit() {}
-  cancelform() {
-    this.routes.navigate(['/welcome']);
-  }
+  
 }
