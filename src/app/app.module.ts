@@ -13,6 +13,6 @@ import { SellersComponent } from './sellers/sellers.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, WelcomeComponent, LoginComponent, ProductsComponent, BuyersComponent, SellersComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ LoginComponent ]
 })
 export class AppModule { }
