@@ -8,9 +8,10 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   constructor(private routes: Router) {
-    document.getElementById('login').style.display ="none";
+    document.getElementById("login").style.display = "none";
   }
 
   ngOnInit() {}
-  
+
+  submitform() {}
 }
