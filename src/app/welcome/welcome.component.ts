@@ -11,7 +11,7 @@ export class WelcomeComponent implements OnInit {
     document.getElementById("login").style.display='';
    }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
 }
