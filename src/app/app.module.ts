@@ -10,9 +10,11 @@ import { ProductsComponent } from "./products/products.component";
 import { BuyersComponent } from "./buyers/buyers.component";
 import { SellersComponent } from "./sellers/sellers.component";
 import { AppRouting } from "./app-routing";
+import { LoginService } from "./login/login.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRouting],
+  imports: [BrowserModule, FormsModule, AppRouting, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -22,6 +24,7 @@ import { AppRouting } from "./app-routing";
     BuyersComponent,
     SellersComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [LoginService]
 })
 export class AppModule {}

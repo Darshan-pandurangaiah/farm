@@ -4,7 +4,7 @@
       <label>Username</label>
     </td>
     <td>
-      <input />
+      <input type="text" [(ngModel)]="login.username" #username="ngModel" />
     </td>
   </tr>
   <tr>
@@ -12,13 +12,13 @@
       <label>Password</label>
     </td>
     <td>
-      <input type="password" />
+      <input type="password" [(ngModel)]="login.password" #password="ngModel" />
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
-      <input type="submit" (click)="submitform()"/>
+      <input type="submit" (click)="submitform()" />
       <input type="submit" value="Cancel" [routerLink]="['/welcome']" />
     </td>
   </tr>

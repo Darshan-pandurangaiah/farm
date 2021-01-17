@@ -6,7 +6,9 @@ import { WelcomeComponent } from "./welcome/welcome.component";
 const routes: Routes = [
   { path: "welcome", component: WelcomeComponent },
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
-  { path: "login", component: LoginComponent },
+  { path: "login", component: LoginComponent }
+  // ,
+  // { path:"Products",loadChildren:() => import(./products/product.module).then(m => m.productmodule);}
 ];
 
 @NgModule({
