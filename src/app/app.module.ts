@@ -12,6 +12,7 @@ import { SellersComponent } from "./sellers/sellers.component";
 import { AppRouting } from "./app-routing";
 import { LoginService } from "./login/login.service";
 import { HttpClientModule } from "@angular/common/http";
+import { ProductsGuard } from "./products/products.guard";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRouting, HttpClientModule],
@@ -25,6 +26,6 @@ import { HttpClientModule } from "@angular/common/http";
     SellersComponent
   ],
   bootstrap: [AppComponent],
-  providers: [LoginService]
+  providers: [LoginService, ProductsGuard]
 })
 export class AppModule {}
