@@ -8,32 +8,34 @@ import { Observable, pipe, throwError } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 import { Login } from "./login";
 
+const headers = new HttpHeaders({
+  "Content-Type": "application/json; charset=utf-8",
+  host: "https://farmtesting.stackblitz.io"
+});
+
 @Injectable()
 export class LoginService {
   public logininstance: Login;
-
-  httpOptions = {
-    headers: new HttpHeaders({
-      "Content-Type": "application/json",
-      "Content-Length": "50"
-    })
-  };
+  public url: string;
+  data = "";
 
   constructor(private http: HttpClient) {
     this.logininstance = new Login();
   }
   getusers(logininstance) {
-    console.log(" test " + logininstance.username);
+    console.log(" test ");
     return this.http
-      .post<any>(
+      .post<boolean>(
         "https://farmapi.azurewebsites.net/Users",
         {
           Name: "Darshan",
-          Password: "comm@51"
+          Password: "comm@5"
         },
-        this.httpOptions
+        { headers: headers }
       )
-      .pipe(catchError(this.handlerror));
+      .subscribe(res => {
+        console.log("inside postmehtod of sub.function", true);
+      });
   }
   handlerror(err: HttpErrorResponse) {
     console.log(err);
