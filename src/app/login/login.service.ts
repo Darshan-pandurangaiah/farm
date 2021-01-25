@@ -16,6 +16,7 @@ const headers = new HttpHeaders({
 @Injectable()
 export class LoginService {
   public logininstance: Login;
+  public errormessage: string;
   public url: string;
   data = "";
 
@@ -33,12 +34,14 @@ export class LoginService {
         },
         { headers: headers }
       )
-      .subscribe(res => {
-        console.log("inside postmehtod of sub.function", true);
+      .subscribe({
+        next: data => {
+          console.log(data);
+        },
+        error: error => {
+          this.errormessage = error.message;
+          console.error("There was an error!", error.message);
+        }
       });
-  }
-  handlerror(err: HttpErrorResponse) {
-    console.log(err);
-    return throwError(err.message || "server erroring");
   }
 }
