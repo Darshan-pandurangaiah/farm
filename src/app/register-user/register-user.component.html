@@ -29,8 +29,8 @@
 			</tr>
 			<br>
 			<tr>
-				<button type="submit" class="btn btn-secondary">Submit</button>
-				<input type="submit" value="Cancel" [routerLink]="['/welcome']" />
+				<button type="submit" [disabled]="!form.valid" >Submit</button>
+				<input type="submit" value="Cancel"  [routerLink]="['/welcome']" />
 			</tr>
 		</table>
 

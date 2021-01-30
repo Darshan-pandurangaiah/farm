@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder,Validators, FormControl } from "@angular/forms";
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl
+} from "@angular/forms";
 import { RegisterUserService } from "./register-user.service";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 @Component({
@@ -21,9 +26,9 @@ export class RegisterUserComponent implements OnInit {
     //   Roleid: ""
     // });
     this.form = new FormGroup({
-      "name": new FormControl("",Validators.required),
-      "password": new FormControl("",Validators.required),
-      "Roleid": new FormControl("",Validators.required), 
+      name: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required),
+      Roleid: new FormControl("", Validators.required)
     });
   }
   constructor(
