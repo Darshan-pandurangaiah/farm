@@ -1,9 +1,5 @@
 import { Injectable } from "@angular/core";
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders
-} from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, pipe, throwError } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 import { Login } from "./login";
@@ -33,7 +29,7 @@ export class LoginService {
           Password: "comm@5"
         },
         { headers: headers }
-      ) 
+      )
       .subscribe({
         next: data => {
           console.log(data);

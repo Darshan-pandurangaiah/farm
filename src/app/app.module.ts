@@ -14,6 +14,7 @@ import { LoginService } from "./login/login.service";
 import { HttpClientModule } from "@angular/common/http";
 import { ProductsGuard } from "./products/products.guard";
 import { RegisterUserComponent } from "./register-user/register-user.component";
+import { RegisterUserService } from './register-user/register-user.service';
 
 @NgModule({
   imports: [
@@ -34,6 +35,6 @@ import { RegisterUserComponent } from "./register-user/register-user.component";
     RegisterUserComponent
   ],
   bootstrap: [AppComponent],
-  providers: [LoginService, ProductsGuard]
+  providers: [LoginService, ProductsGuard, RegisterUserService]
 })
 export class AppModule {}

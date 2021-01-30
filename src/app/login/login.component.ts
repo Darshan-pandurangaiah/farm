@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   login = new Login();
   constructor(private routes: Router, private loginser: LoginService) {
     document.getElementById("login").style.display = "none";
+    document.getElementById("Register").style.display = "";
   }
 
   ngOnInit() {}
