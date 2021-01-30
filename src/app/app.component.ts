@@ -7,11 +7,14 @@ import { Router } from "@angular/router";
 })
 export class AppComponent {
   name = "Angular " + VERSION.major;
-logintitle = "login";
-  constructor(private route: Router) {    
-  }
+  logintitle = "Login";
+  Registertitle = "Register";
+  constructor(private route: Router) {}
 
   login() {
     this.route.navigate(["/login"]);
+  }
+  Register() {
+    this.route.navigate(["/Register"]);
   }
 }

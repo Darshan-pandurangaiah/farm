@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
@@ -13,9 +13,16 @@ import { AppRouting } from "./app-routing";
 import { LoginService } from "./login/login.service";
 import { HttpClientModule } from "@angular/common/http";
 import { ProductsGuard } from "./products/products.guard";
+import { RegisterUserComponent } from "./register-user/register-user.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRouting, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRouting,
+    HttpClientModule,
+    ReactiveFormsModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -23,7 +30,8 @@ import { ProductsGuard } from "./products/products.guard";
     LoginComponent,
     ProductsComponent,
     BuyersComponent,
-    SellersComponent
+    SellersComponent,
+    RegisterUserComponent
   ],
   bootstrap: [AppComponent],
   providers: [LoginService, ProductsGuard]

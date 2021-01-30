@@ -1,0 +1,28 @@
+<h1>Register User</h1>
+<div>
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+		<table>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<td><label >Name</label>
+			</tr>
+			<tr>
+				<input id="Name1" type="text" formControlName="Name1" >
+		</tr>
+			<tr>
+				<label>Password</label>
+			</tr>
+			<tr>
+				<input id="Password1" type="text" formControlName="Password1">
+		</tr>
+			<tr>
+
+			</tr>
+		</table>
+		<button type="submit" class="btn btn-secondary">Submit</button>
+
+
+	</form>
+</div>

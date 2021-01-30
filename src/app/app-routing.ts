@@ -4,11 +4,13 @@ import { LoginComponent } from "./login/login.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { ProductsComponent } from "./products/products.component";
 import { ProductsGuard } from "./products/products.guard";
+import { RegisterUserComponent } from "./register-user/register-user.component";
 
 const routes: Routes = [
   { path: "welcome", component: WelcomeComponent },
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
   { path: "login", component: LoginComponent },
+  { path: "Register", component: RegisterUserComponent },
   {
     path: "products",
     component: ProductsComponent,
